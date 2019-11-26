@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+
+nav{
+    top:50px;
+}
+
+ nav a{
+    font-family: 'Roboto Mono', monospace;
+    color: #111;
+    font-size: 1em;
+
+ }
+
+ .grid{
+     margin-top: 100px;
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     column-gap: 5px;
+     row-gap: 10px;
+     grid-auto-rows: 300px;
+    
+ }
+
+.grid img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid img:nth-child(2){
+   grid-area: 1 / 2 / span 2 /span 1;
+}
+
+.grid img:nth-child(6){
+    grid-area: 3 / 1 / span 1 /span 3;
+ }
+
+footer{
+    position: relative;
+    height: 15vh;
+    margin-top: 20px;
+}
+
+footer img{
+    position: absolute;
+    bottom: 5vh;
+    left: 97%;
+}
+
+
+@media screen and (max-width: 768px ){
+    .grid{
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+        grid-auto-rows: 300px;
+    }
+    .grid img{
+        object-fit: cover;
+    }
+
+    .grid img:nth-child(1n){
+        grid-area:  span 1/span 1;
+     }
+
+
+     footer{
+         max-width: 100vh;
+     }
+
+     footer img{
+        position: relative;
+        bottom: 0px;
+        left:50%;
+       
+    }
+
+
+
+
+
+}
